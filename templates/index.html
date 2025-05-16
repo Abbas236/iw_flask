@@ -1,0 +1,53 @@
+{% extends "layout.html" %} {% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Library Management System</h1>
+    <p class="lead">A complete backend solution for managing books and borrowing records.</p>
+    <hr class="my-4">
+    <p>Use the navigation menu to browse books or manage borrowing records.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">API Documentation</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Book Endpoints</h6>
+                    <ul>
+                        <li>GET /api/books - List all books</li>
+                        <li>GET /api/books/&lt;id&gt; - Get a specific book</li>
+                        <li>POST /api/books - Create a new book</li>
+                        <li>PUT /api/books/&lt;id&gt; - Update a book</li>
+                        <li>DELETE /api/books/&lt;id&gt; - Delete a book</li>
+                    </ul>
+
+                    <h6>Borrowing Endpoints</h6>
+                    <ul>
+                        <li>GET /api/borrows - List all borrowing records</li>
+                        <li>GET /api/borrows/active - List active borrowings</li>
+                        <li>GET /api/borrows/overdue - List overdue borrowings</li>
+                        <li>POST /api/borrow - Borrow a book</li>
+                        <li>PUT /api/return/&lt;id&gt; - Return a book</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">Test API</h5>
+                </div>
+                <div class="card-body">
+                    <p>You can test the API using tools like Postman or via JavaScript fetch in the browser console.</p>
+                    <p>Example JavaScript API call:</p>
+                    <pre class="bg-light p-2">
+fetch('/api/books')
+  .then(response => response.json())
+  .then(data => console.log(data));</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
